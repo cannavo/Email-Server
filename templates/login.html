@@ -1,0 +1,26 @@
+<!doctype html>
+<hmtl>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}" type="text/css"/>
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>N-MAIL</h1>
+    <div class="login">
+      <h2>Login</h2>
+      <form id="form" method="post" action="login">
+	<input type="text" name="userid" placeholder="Username"/>
+	<input type="password" name="password" placeholder="Password" />
+	<input type="submit" class="logi"  name="login" value="login"/>
+      </form>
+      <form  method="post" action="create">
+	{% if valid==2 %}
+	<span><p>Incorrect Password</p></span>
+	{% elif valid==3 %}
+	<span><p>User not found</p></span>
+	{% endif %}
+	Don't have an account? <input type="submit" class="sign" name="signup" value="Sign Up"/>
+      </form>
+    </div>
+  </body>
+</html>

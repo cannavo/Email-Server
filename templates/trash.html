@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Trash</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/in.css') }}" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>N-MAIL</h1>
+    </header>    
+    <form action="trash" class="log" method="post">
+      <button type="submit" name="log" value="log">Sign Out</button>  
+    </form>
+    <form action="new" class="new" method="post">
+      <button type="submit" name="new" value="new"><h4>New</h4></button>
+    </form>
+    <form action="inbox" class="box" method="post">
+      <button type="submit" name="in" value="in">Inbox({{ length }})</button>
+    </form>
+    <form action="outbox" class="box2" method="post">
+      <button type="submit" name="out" value="out">Outbox</button>
+    </form>
+    <form action="trash" class="box3" method="post">
+      <button type="submit" name="trash" value="trash">Trash</button>
+    </form>
+    <form class="inbox" action="trash" method="post">
+      {% for amail in mails %}
+      <button type="submit" name="ident" value="{{amail.ident}}"><span class="user">{{amail.sender}}</span><br>({{amail.date}})<br>{{amail.subject}}</button>
+      {% endfor %}    
+    </form>
+    <div class="mail">
+      {% if (mail is not none) %}
+      <h2>{{ mail.subject }}({{ mail.date }})
+        <form class="buttons" action="trash" method="post">
+          <button type="submit" name="delete" value="{{ mail.ident }}"><img src="{{ url_for('static',filename='img/delete.png') }}" alt="delete" class="delete"/></button>
+          <button type="submit" name="reply" value="{{ mail.sender }}"><img src="{{ url_for('static',filename='img/reply.png') }}" alt="reply" class="reply"/></button>
+	</form>
+      </h2>
+      <h3>From: {{ mail.sender }}</h3>
+      <p>{{ mail.text|safe }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

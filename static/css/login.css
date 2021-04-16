@@ -1,0 +1,59 @@
+.login
+{
+	position : absolute;    
+    	width    : 250px;
+    	height   : 250px;
+    	left     : 50%;
+    	top      : 50%;
+    	margin-left : -125px; /* half of the width  */
+    	margin-top  : -125px; /* half of the height */
+	background-color: #E9E7DA;
+	text-align: center;
+	color: #373F27;
+	border: solid #373f27;
+	border-width: 1px 1px 1px 1px;
+	box-shadow: 0 12px 22px 0 rgba(0,0,0,0.3), 0 14px 24px 0 rgba(0,0,0,0.27);
+}
+body
+{
+	background-color: #CDA34F;
+}
+input[type=text]
+{
+	width: 200px;
+	margin-bottom: 10px;
+	height: 20px;	
+}
+input[type=password]
+{
+	width: 200px;
+	margin-bottom: 10px;
+	height: 20px;
+}
+.logi
+{
+  	background-color:#636B46; 
+	font-size: 18px; 
+    	color: #E9E7DA;
+    	padding: 10px 24px; 
+    	cursor: pointer;
+	width: 200px; 
+	margin-bottom: 10px;	
+}
+.sign
+{
+	background-color: #373f27; 
+    	color: #E9E7DA;
+}
+h1
+{
+	color: #E9E7DA;
+	font-size: 100px;
+	text-align: center;
+	margin-top: 50px;
+}
+span p
+{
+    margin: 0 0 0 0;
+    color: red;
+}

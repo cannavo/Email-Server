@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}" type"text/css"/>
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <h1>N-MAIL</h1>
+    <div class="login">
+      <h2>Sign Up</h2>
+      <form id="form" method="post" action="create">
+	<input type="text" name="userid" placeholder="Username"/>
+	<input type="password" name="password1" placeholder="Password"/>
+	<input type="password" name="password2" placeholder="Confim Password"/>
+        <input type="submit" class="logi"  name="signup" value="Sign Up"/>
+      </form>
+      {% if (valid==2) %}
+      <span><p>Passwords don't match</p></span>
+      {% elif (valid==3) %}
+      <span><p>Username already exists</p></span>\
+      {% endif %}
+    </div>
+  </body>
+</html>

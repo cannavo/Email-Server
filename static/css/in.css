@@ -1,0 +1,238 @@
+header 
+{
+	width: 100%;
+    	height: 70px;
+    	z-index: 2;
+  	top: 0;
+    	left: 0;
+    	overflow-x: hidden;
+    	padding-top: 0;
+    	background-color: #CDA34F;
+    	text-align: center;
+    	vertical-align: middle;
+	color: #E9E7DA;
+}
+body
+{
+    margin: 0 0 0 0;
+}
+.log button 
+{
+	position: absolute;
+	top: 15px;
+	right:50px;
+    	background-color: #373f27; 
+ 	border: none;
+    	color: #E9E7DA;
+    	padding: 10px 20px;
+    	text-align: center;
+    	display: inline-block;
+    	font-size: 16px;
+    	margin: 4px 2px;
+    	cursor: pointer;
+	border-radius: 8px;
+	transition-duration: 0.4s;
+}
+.new button
+{
+	position: absolute;
+	top: 250px;
+	left:5px;
+	width: 135px;
+	height: 40px;
+    	background-color: #CDA34F; 
+ 	border: none;
+    	color: #E9E7DA;
+    	padding: 10px 20px;
+    	text-align: center;
+    	display: inline-block;
+    	font-size: 16px;
+    	margin: 4px 2px;
+    	cursor: pointer;
+	border-radius: 8px;
+   	z-index: 2;	
+}
+h4
+{
+	margin: 0;
+}
+.log button:hover
+{
+	background-color: #E9E7DA;
+	color: #373f27;
+}
+h1
+{
+	font-size:50px;
+	margin-top: 10px;
+	margin-bottom:0;
+}
+.box
+{
+	height: 100%;
+	width: 150px;
+  	position: fixed;
+   	top: 70px;
+    	left: 0;
+   	background-color: #373f27;
+}
+.box button
+{
+  	background-color: #373f27; 
+    	border: solid #636B46;
+	border-width: 0 0 2px 0;
+	font-size: 25px; 
+    	color: #E9E7DA;
+    	padding: 10px 24px; 
+    	cursor: pointer;
+	width: 100%; 
+    	display: block; 
+}
+
+.inbox
+{
+	height: 100%;
+	width: 180px;
+  	position: fixed;
+   	top: 70px;
+    	left: 150px;
+   	background-color: #636B46;
+	overflow-y: scroll;
+}
+.inbox button
+{
+  	background-color: #636B46; 
+    	border: solid #373f27;
+	border-width: 0 0 2px 0;
+    	color: #E9E7DA;
+    	padding: 10px 24px; 
+    	cursor: pointer;
+	width: 100%; 
+    	display: block; 
+	text-align: left;
+}
+.inbox button span
+{
+	font-weight: bold;
+	font-size: 16px;
+}
+.mail
+{
+	position: fixed;
+   	top: 70px;
+    	left: 330px;
+   	background-color: #E9E7DA;
+	height: 100%;
+	width:calc(100% - 330px); 
+	color: #373f27;
+	z-index: 0;
+	word-break: break-all;
+	white-space: normal;
+	overflow-y: scroll;
+}
+.mail h2 
+{
+    font-size: 30px;
+    display: inline;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.mail h3
+{
+	font-size: 22px;
+	margin-left: 25px;
+	border: solid #636B46;
+	border-width: 2px 0 0 0;
+}
+.mail p
+{
+	margin-left: 25px;
+}
+.delete
+{
+    width: 20px;
+    height: 20px;
+}
+.reply
+{
+    width: 20px;
+    height: 20px;
+}
+.buttons
+{
+    display: inherit;
+}
+.newmail
+{
+	position: fixed;
+   	top: 70px;
+    	left: 150px;
+   	background-color: #E9E7DA;
+	height: 100%;
+	width:calc(100% - 150px);
+	color: #373f27;
+	z-index: 0;
+	word-break: break-all;
+	white-space: normal;
+}
+.newmail input
+{
+    width: calc(100% - 40px);
+    margin: 20px;
+    background-color: #E9E7DA;
+    color: #373f27;
+}
+textarea
+{
+    width: calc(100% - 40px);
+    height: calc(90vh - 250px);
+    margin: 20px;
+    background-color: #E9E7DA;
+    color: #373f27;
+    resize:none;
+}
+.box2 button
+{
+  	background-color: #373f27; 
+    	border: solid #636B46;
+	border-width: 0 0 2px 0;
+	font-size: 25px; 
+    	color: #E9E7DA;
+    	padding: 10px 24px; 
+    	cursor: pointer;
+	position: absolute;
+	top: 121px;
+	left: 0;
+	height: 51px;
+	width: 150px;
+	z-index:10; 
+}
+.box3 button
+{
+  	background-color: #373f27; 
+    	border: solid #636B46;
+	border-width: 0 0 2px 0;
+	font-size: 25px; 
+    	color: #E9E7DA;
+    	padding: 10px 24px; 
+    	cursor: pointer;
+	position: absolute;
+	top: 172px;
+	left: 0;
+	height: 51px;
+	width: 150px;
+	z-index:11; 
+}
+.newmail button
+{
+    display: block;
+    background-color: #636B46; 
+    border: none;
+    color: #E9E7DA;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}

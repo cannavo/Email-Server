@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/in.css') }}" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>N-MAIL</h1>
+    </header>
+    <form action="new" class="log" method="post">
+      <button type="submit" name="log" value="log">Sign Out</button>
+    </form>
+    <form action="new" class="new" method="post">
+      <button type="submit" name="new" value="new"><h4>New</h4></button>
+    </form>
+    <form action="inbox" class="box" method="post">
+      <button type="submit" name="inb" value="inb">Inbox({{length}})</button>
+    </form>
+    <form action="outbox" class="box2" method="post">
+      <button type="submit" name="out" value="out">Outbox</button>
+    </form>  
+    <form action="trash" class="box3" method="post">
+      <button type="submit" name="trash" value="trash">Trash</button>
+    </form>
+    <div class="newmail">
+      <form class="newm" method="post" action="new">
+	{% if (reciever is none) %}
+        <input type="text" name="rec" placeholder="To:"/>
+	{% else %}
+	<input type="text" name="rec" value="{{reciever}}"/>
+	{% endif %}
+        <input type="text" name="subj" placeholder="Subject"/>
+        <textarea name="text" placeholder="Enter Message"></textarea>
+        <button type="submit" name="send" value="send">Send</button>
+      </form>    
+    </div>
+  </body>
+</html>
